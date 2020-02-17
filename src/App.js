@@ -13,11 +13,21 @@ function App() {
     <div className="App">
       <Layout>
         <Header style={{ background: "#f6f6f6", padding: 8 }}>
-          <Avatar src="./assets/avatar.png" style={{ float: "right" }} />
+          <Avatar icon="user" style={{ float: "right" }} />
           <Title level={3}>Meu Painel</Title>
         </Header>
         <Layout>
-          <Sider style={{ background: "#f6f6f6" }}>
+          <Sider
+            breakpoint="lg"
+            collapsedWidth="0"
+            onBreakpoint={broken => {
+              console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log(collapsed, type);
+            }}
+            style={{ background: "#f6f6f6" }}
+          >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <Menu.Item>Dashboard</Menu.Item>
               <SubMenu
@@ -28,7 +38,11 @@ function App() {
                   </span>
                 }
               >
-                <Menu.ItemGroup title="About" />
+                <Menu.ItemGroup title="Sub Menu 1" />
+                <Menu.ItemGroup title="Sub Menu 2" />
+                <Menu.ItemGroup title="Sub Menu 3" />
+                <Menu.ItemGroup title="Sub Menu 4" />
+                <Menu.ItemGroup title="Sub Menu 5" />
               </SubMenu>
             </Menu>
           </Sider>
