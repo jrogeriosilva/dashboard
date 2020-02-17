@@ -12,21 +12,22 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Header style={{ background: "#f6f6f6", padding: 8 }}>
+        <Header style={{ background: "#f6f6f6", padding: 5 }}>
           <Avatar icon="user" style={{ float: "right" }} />
-          <Title level={3}>Meu Painel</Title>
+          <Title level={4}>❤ ReactJS Control Pannel</Title>
         </Header>
         <Layout>
           <Sider
-            breakpoint="lg"
-            collapsedWidth="0"
+            theme="dark"
+            breakpoint="sm"
+            collapsedWidth="40"
             onBreakpoint={broken => {
               console.log(broken);
             }}
             onCollapse={(collapsed, type) => {
               console.log(collapsed, type);
             }}
-            style={{ background: "#f6f6f6" }}
+            style={{ background: "#f6f6f6", marginTop: 53 }}
           >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <SubMenu
