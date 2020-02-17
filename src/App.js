@@ -29,20 +29,41 @@ function App() {
             style={{ background: "#f6f6f6" }}
           >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
-              <Menu.Item>Dashboard</Menu.Item>
               <SubMenu
                 title={
                   <span>
                     <Icon type="home" />
-                    <span>Visão Geral</span>
+                    <span>Menu 1</span>
                   </span>
                 }
               >
                 <Menu.ItemGroup title="Sub Menu 1" />
                 <Menu.ItemGroup title="Sub Menu 2" />
                 <Menu.ItemGroup title="Sub Menu 3" />
-                <Menu.ItemGroup title="Sub Menu 4" />
-                <Menu.ItemGroup title="Sub Menu 5" />
+              </SubMenu>
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="setting" />
+                    <span>Menu 2</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup title="Sub Menu 1" />
+                <Menu.ItemGroup title="Sub Menu 2" />
+                <Menu.ItemGroup title="Sub Menu 3" />
+              </SubMenu>
+              <SubMenu
+                title={
+                  <span>
+                    <Icon type="github" />
+                    <span>Menu 3</span>
+                  </span>
+                }
+              >
+                <Menu.ItemGroup title="Sub Menu 1" />
+                <Menu.ItemGroup title="Sub Menu 2" />
+                <Menu.ItemGroup title="Sub Menu 3" />
               </SubMenu>
             </Menu>
           </Sider>
@@ -52,7 +73,7 @@ function App() {
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <div style={{ background: "#fff", padding: 24, minHeight: 480 }}>
+              <div style={{ background: "#fff", padding: 24, minHeight: 1000 }}>
                 <p>{text}</p>
                 <p>{text}</p>
                 <p>{text}</p>
