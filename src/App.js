@@ -104,17 +104,18 @@ function App() {
                 <p>{text}</p>
               </div>
             </Content>
-            <Footer
-              style={{
-                background: "#f6f6f6",
-                padding: 8,
-                textAlign: "center"
-              }}
-            >
-              <b> ❤ ReactJS </b>
-            </Footer>
           </Layout>
         </Layout>
+        <Footer
+          style={{
+            background: "#000000",
+            padding: 8,
+            textAlign: "center",
+            color: "#FFF"
+          }}
+        >
+          <b> ❤ ReactJS </b>
+        </Footer>
       </Layout>
     </div>
   );
