@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Layout, Avatar, Menu, Icon, Breadcrumb } from "antd";
+import { Layout, Avatar, Menu, Icon, Breadcrumb, Dropdown } from "antd";
 import Title from "antd/lib/typography/Title";
 import SubMenu from "antd/lib/menu/SubMenu";
 import data from "../src/content.json";
@@ -8,12 +8,34 @@ const text = data.text;
 
 const { Header, Footer, Sider, Content } = Layout;
 
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="Oi">
+        Configurações
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="Oi">
+        Segurança
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="Oi">
+        Sair
+      </a>
+    </Menu.Item>
+  </Menu>
+);
+
 function App() {
   return (
     <div className="App">
       <Layout>
         <Header style={{ background: "#000000", padding: 4 }}>
-          <Avatar icon="user" style={{ float: "right", marginRight: 43 }} />
+          <Dropdown overlay={menu}>
+            <Avatar icon="user" style={{ float: "right", marginRight: 43 }} />
+          </Dropdown>
           <Title level={4} style={{ color: "white" }}>
             ❤ ReactJS Control Pannel
           </Title>
