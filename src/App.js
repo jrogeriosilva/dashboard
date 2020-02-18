@@ -1,6 +1,16 @@
 import React from "react";
 import "./App.css";
-import { Layout, Avatar, Menu, Icon, Breadcrumb, Dropdown } from "antd";
+import {
+  Layout,
+  Avatar,
+  Menu,
+  Icon,
+  Breadcrumb,
+  Dropdown,
+  Card,
+  Col,
+  Row
+} from "antd";
 import Title from "antd/lib/typography/Title";
 import SubMenu from "antd/lib/menu/SubMenu";
 import data from "../src/content.json";
@@ -43,14 +53,10 @@ function App() {
         <Layout>
           <Sider
             breakpoint="sm"
-            collapsedWidth="80"
-            onBreakpoint={broken => {
-              console.log(broken);
-            }}
-            onCollapse={(collapsed, type) => {
-              console.log(collapsed, type);
-            }}
-            style={{ background: "#FFF", marginTop: 53 }}
+            collapsedWidth="20%"
+            onBreakpoint={broken => {}}
+            onCollapse={(collapsed, type) => {}}
+            style={{ background: "#FFF", marginTop: "53" }}
           >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <SubMenu
@@ -97,12 +103,23 @@ function App() {
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <div style={{ background: "#fff", padding: 24, minHeight: 1000 }}>
-                <p>{text}</p>
-                <p>{text}</p>
-                <p>{text}</p>
-                <p>{text}</p>
-              </div>
+              <Row gutter={16}>
+                <Col span={8}>
+                  <Card title="Card title" bordered={false}>
+                    {text}
+                  </Card>
+                </Col>
+                <Col span={8}>
+                  <Card title="Card title" bordered={false}>
+                    {text}
+                  </Card>
+                </Col>
+                <Col span={8}>
+                  <Card title="Card title" bordered={false}>
+                    {text}
+                  </Card>
+                </Col>
+              </Row>
             </Content>
           </Layout>
         </Layout>
