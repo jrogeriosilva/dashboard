@@ -41,7 +41,7 @@ const menu = (
 function App() {
   return (
     <div className="App">
-      <Layout>
+      <Layout style={{ minHeight: "100%" }}>
         <Header style={{ background: "#000000", padding: 4 }}>
           <Dropdown overlay={menu}>
             <Avatar icon="user" style={{ float: "right", marginRight: 43 }} />
@@ -50,10 +50,10 @@ function App() {
             ❤ ReactJS Control Pannel
           </Title>
         </Header>
-        <Layout>
+        <Layout style={{ minHeight: "100%" }}>
           <Sider
             breakpoint="sm"
-            collapsedWidth="20%"
+            collapsedWidth="80px"
             onBreakpoint={broken => {}}
             onCollapse={(collapsed, type) => {}}
             style={{ background: "#FFF", marginTop: "53" }}
@@ -97,13 +97,13 @@ function App() {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout>
+          <Layout style={{ minHeight: "100%" }}>
             <Content style={{ padding: "0 50px" }}>
               <Breadcrumb style={{ margin: "16px 0" }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <Row gutter={16}>
+              <Row gutter={18} span={8}>
                 <Col span={8}>
                   <Card title="Card title" bordered={false}>
                     {text}
