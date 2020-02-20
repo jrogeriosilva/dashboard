@@ -9,9 +9,11 @@ import {
   Dropdown,
   Card,
   Col,
-  Row
+  Row,
+  Tag
 } from "antd";
 import Title from "antd/lib/typography/Title";
+// import Text from "antd/lib/typography/Text";
 import SubMenu from "antd/lib/menu/SubMenu";
 import data from "../src/content.json";
 const text = data.text;
@@ -46,7 +48,7 @@ function App() {
           <Dropdown overlay={menu}>
             <Avatar icon="user" style={{ float: "right", marginRight: 43 }} />
           </Dropdown>
-          <Title level={4} style={{ color: "white" }}>
+          <Title level={3} style={{ color: "white" }}>
             ❤ ReactJS Control Pannel
           </Title>
         </Header>
@@ -56,7 +58,7 @@ function App() {
             collapsedWidth="80px"
             onBreakpoint={broken => {}}
             onCollapse={(collapsed, type) => {}}
-            style={{ background: "#FFF", marginTop: "53" }}
+            style={{ background: "#FFF", marginTop: "53", minHeight: "100%" }}
           >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <SubMenu
@@ -98,19 +100,21 @@ function App() {
             </Menu>
           </Sider>
           <Layout style={{ minHeight: "100%" }}>
-            <Content style={{ padding: "0 50px" }}>
+            <Content style={{ padding: "0 50px", minHeight: "100%" }}>
               <Breadcrumb style={{ margin: "16px 0" }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <Row gutter={18} span={8}>
-                <Col span={8}>
-                  <Card title="Card title" bordered={false}>
-                    {text}
+              <Row gutter={18} span={8} style={{ minHeight: "100%" }}>
+                <Col span={8} style={{ minHeight: "100%" }}>
+                  <Card title="Balance" bordered={false}>
+                    <Title ellipsis="true">530$</Title>
+
+                    <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
                 <Col span={8}>
-                  <Card title="Card title" bordered={false}>
+                  <Card title="Total Orders" bordered={false}>
                     {text}
                   </Card>
                 </Col>
@@ -128,10 +132,10 @@ function App() {
             background: "#000000",
             padding: 8,
             textAlign: "center",
-            color: "#FFF"
+            color: "#BBB"
           }}
         >
-          <b> ❤ ReactJS </b>
+          React Dasboard | 2020 © jrogeriosilva v2.2.0 Powered by React.JS ⚛
         </Footer>
       </Layout>
     </div>
