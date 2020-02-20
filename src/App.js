@@ -106,21 +106,33 @@ function App() {
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
               <Row gutter={[0, 20]}>
-                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                <Col
+                  sm={{ span: 24, offset: 1 }}
+                  md={{ span: 24, offset: 1 }}
+                  lg={{ span: 8 }}
+                >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
 
                     <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
-                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                <Col
+                  sm={{ span: 24, offset: 1 }}
+                  md={{ span: 24, offset: 1 }}
+                  lg={{ span: 8 }}
+                >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
 
                     <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
-                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                <Col
+                  sm={{ span: 24, offset: 1 }}
+                  md={{ span: 24, offset: 1 }}
+                  lg={{ span: 8 }}
+                >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
 
