@@ -15,8 +15,8 @@ import {
 import Title from "antd/lib/typography/Title";
 // import Text from "antd/lib/typography/Text";
 import SubMenu from "antd/lib/menu/SubMenu";
-import data from "../src/content.json";
-const text = data.text;
+// import data from "../src/content.json";
+// const text = data.text;
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -42,8 +42,8 @@ const menu = (
 
 function App() {
   return (
-    <div className="App">
-      <Layout style={{ minHeight: "100%" }}>
+    <>
+      <Layout>
         <Header style={{ background: "#000000", padding: 4 }}>
           <Dropdown overlay={menu}>
             <Avatar icon="user" style={{ float: "right", marginRight: 43 }} />
@@ -52,13 +52,13 @@ function App() {
             ❤ ReactJS Control Pannel
           </Title>
         </Header>
-        <Layout style={{ minHeight: "100%" }}>
+        <Layout>
           <Sider
             breakpoint="sm"
             collapsedWidth="80px"
             onBreakpoint={broken => {}}
             onCollapse={(collapsed, type) => {}}
-            style={{ background: "#FFF", marginTop: "53", minHeight: "100%" }}
+            style={{ background: "#FFF", marginTop: "53" }}
           >
             <Menu defaultSelectedKeys={["Dashboard"]} mode="inline">
               <SubMenu
@@ -99,28 +99,39 @@ function App() {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ minHeight: "100%" }}>
-            <Content style={{ padding: "0 50px", minHeight: "100%" }}>
+          <Layout>
+            <Content style={{ padding: "0 50px" }}>
               <Breadcrumb style={{ margin: "16px 0" }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <Row gutter={18} span={8} style={{ minHeight: "100%" }}>
-                <Col span={8} style={{ minHeight: "100%" }}>
+              <Row gutter={[0, 20]}>
+                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
                   <Card title="Balance" bordered={false}>
-                    <Title ellipsis="true">530$</Title>
+                    <Title>1337$</Title>
 
                     <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
-                <Col span={8}>
-                  <Card title="Total Orders" bordered={false}>
-                    {text}
+                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                  <Card title="Balance" bordered={false}>
+                    <Title>1337$</Title>
+
+                    <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
-                <Col span={8}>
-                  <Card title="Card title" bordered={false}>
-                    {text}
+                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                  <Card title="Balance" bordered={false}>
+                    <Title>1337$</Title>
+
+                    <Tag color="green">+3.5%</Tag>
+                  </Card>
+                </Col>
+                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                  <Card title="Balance" bordered={false}>
+                    <Title>1337$</Title>
+
+                    <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
               </Row>
@@ -138,7 +149,7 @@ function App() {
           React Dasboard | 2020 © jrogeriosilva v2.2.0 Powered by React.JS ⚛
         </Footer>
       </Layout>
-    </div>
+    </>
   );
 }
 
