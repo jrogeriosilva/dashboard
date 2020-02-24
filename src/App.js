@@ -105,11 +105,11 @@ function App() {
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
               </Breadcrumb>
-              <Row gutter={[0, 20]}>
+              <Row gutter={[0, 15]}>
                 <Col
-                  sm={{ span: 24, offset: 1 }}
-                  md={{ span: 24, offset: 1 }}
-                  lg={{ span: 8 }}
+                  sm={{ span: 23, offset: 1 }}
+                  md={{ span: 11, offset: 1 }}
+                  lg={{ span: 5 , offset: 1 }}
                 >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
@@ -118,9 +118,9 @@ function App() {
                   </Card>
                 </Col>
                 <Col
-                  sm={{ span: 24, offset: 1 }}
-                  md={{ span: 24, offset: 1 }}
-                  lg={{ span: 8 }}
+                  sm={{ span: 23, offset: 1 }}
+                  md={{ span: 11, offset: 1 }}
+                  lg={{ span: 5 , offset: 1 }}
                 >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
@@ -129,9 +129,9 @@ function App() {
                   </Card>
                 </Col>
                 <Col
-                  sm={{ span: 24, offset: 1 }}
-                  md={{ span: 24, offset: 1 }}
-                  lg={{ span: 8 }}
+                  sm={{ span: 23, offset: 1 }}
+                  md={{ span: 11, offset: 1 }}
+                  lg={{ span: 5 , offset: 1 }}
                 >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
@@ -139,7 +139,11 @@ function App() {
                     <Tag color="green">+3.5%</Tag>
                   </Card>
                 </Col>
-                <Col sm={{ span: 24, offset: 1 }} lg={{ span: 8 }}>
+                <Col
+                  sm={{ span: 23, offset: 1 }}
+                  md={{ span: 11, offset: 1 }}
+                  lg={{ span: 5 , offset: 1 }}
+                >
                   <Card title="Balance" bordered={false}>
                     <Title>1337$</Title>
 
